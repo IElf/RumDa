@@ -32,3 +32,5 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\bin\
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\obj\Debug\mvc_1.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\obj\Debug\mvc_1.dll
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\obj\Debug\mvc_1.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\bin\DotNet.Business.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\mvc_1\bin\DotNet.Utilities.dll
