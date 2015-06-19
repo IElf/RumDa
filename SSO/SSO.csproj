@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\MyDll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -58,11 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CacheList.aspx" />
+    <Content Include="Css\glyphicons-halflings-regular.svg" />
     <Content Include="GetToken.aspx" />
     <Content Include="Js\angular-resource.js" />
     <Content Include="Js\angular.js" />
+    <Content Include="Js\less.js" />
     <Content Include="Js\tokenCtrl.js" />
     <Content Include="Service\SSOService.asmx" />
+    <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,10 +96,22 @@
       <DependentUpon>SSOService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Voucher.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="cache.ashx" />
+    <Content Include="Css\LESS.less" />
+    <Content Include="Css\glyphicons-halflings-regular.eot" />
+    <Content Include="Css\glyphicons-halflings-regular.ttf" />
+    <Content Include="Css\glyphicons-halflings-regular.woff" />
+    <Content Include="Css\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -30,7 +30,7 @@ namespace SSO
                 {
                     Id = Guid.NewGuid().GetHashCode(),
                     Token = "",
-                    ValidTime = DateTime.Now.AddMinutes(double.Parse(ConfigurationManager.AppSettings["Timeout"]))
+                    ValidTime = DateTime.Now.AddMinutes(double.Parse(ConfigurationManager.AppSettings["Timeout"])).ToString("yyyy-MM-dd HH:mm:ss")
                 });
                 //Cache的过期时间为 令牌过期时间*2
                 HttpContext.Current.Cache.Insert("SSO.TOKEN", voucher, null, DateTime.MaxValue, TimeSpan.FromMinutes(double.Parse(ConfigurationManager.AppSettings["Timeout"]) * 2));
@@ -75,7 +75,7 @@ namespace SSO
             var voucher = vouchers.FirstOrDefault(x => x.Token == token);
             if (voucher != null)
             {
-                voucher.ValidTime = time;
+                voucher.ValidTime = time.ToString("yyyy-MM-dd HH:mm:ss");
             }
         }
 
@@ -96,7 +96,7 @@ namespace SSO
                 {
                     Id = cert.GetHashCode(),
                     Token = token,
-                    ValidTime = validtime
+                    ValidTime = validtime.ToString("yyyy-MM-dd HH:mm:ss")
                 });
                 HttpContext.Current.Cache["SSO.TOKEN"] = vouchers;
             }

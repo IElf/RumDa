@@ -4,7 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="cache">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <link type="text/css" rel="stylesheet/less" href="Css/LESS.less" />
+    <script src="Js/less.js" type="text/javascript"></script>
+    <title>p</title>
 </head>
 <body ng-controller="CackeGet">
     <form id="form1" runat="server">
@@ -18,11 +20,41 @@
             </div>
             <div>
                 <ul>
-                    <li ng-repeat="item in list">
+                    <li style="height: 90px;">
                         <ul>
-                            <li ng-bind="item.Id"></li>
-                            <li ng-bind="item.Token"></li>
-                            <li ng-bind="item.ValidTime"></li>
+                            <li>
+                                <div class="head">
+                                    <p>Voucher</p>
+                                    <p class="glyphicon glyphicon-stats glyphicon-title-small"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="head">
+                                    <p>Token</p>
+                                    <p class="glyphicon glyphicon-sound-dolby glyphicon-title-small"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="head">
+                                    <div class="active">
+                                        <p>TimeOut</p>
+                                        <p class="glyphicon glyphicon-dashboard glyphicon-small"></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li ng-repeat="item in list" style="height: 61px;">
+                        <ul>
+                            <li>
+                                <div class="body" ng-bind="item.Id" style="line-height: 40px;"></div>
+                            </li>
+                            <li>
+                                <div class="body" ng-bind="item.Token"></div>
+                            </li>
+                            <li>
+                                <div class="active-body" ng-bind="item.ValidTime"></div>
+                            </li>
                         </ul>
                     </li>
                 </ul>

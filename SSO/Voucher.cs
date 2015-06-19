@@ -15,6 +15,6 @@ namespace SSO
         /// <summary>
         /// 有效时间
         /// </summary>
-        public DateTime ValidTime { get; set; }
+        public string ValidTime { get; set; }
     }
 }
