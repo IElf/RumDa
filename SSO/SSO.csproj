@@ -68,6 +68,7 @@
     <Content Include="Css\waterfall.css" />
     <Content Include="DataBases.aspx" />
     <Content Include="GetToken.aspx" />
+    <Content Include="grid.html" />
     <Content Include="images\bg-pattern.png" />
     <Content Include="images\sql.gif" />
     <Content Include="Js\angular-resource.js" />
@@ -82,6 +83,7 @@
     <Content Include="Js\stellar.js" />
     <Content Include="Js\tokenCtrl.js" />
     <Content Include="Js\type.js" />
+    <Content Include="Js\widget-grid.js" />
     <Content Include="Service\SSOService.asmx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
