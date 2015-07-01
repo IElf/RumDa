@@ -63,11 +63,25 @@
   <ItemGroup>
     <Content Include="CacheList.aspx" />
     <Content Include="Css\glyphicons-halflings-regular.svg" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\test.css" />
+    <Content Include="Css\waterfall.css" />
+    <Content Include="DataBases.aspx" />
     <Content Include="GetToken.aspx" />
+    <Content Include="images\bg-pattern.png" />
+    <Content Include="images\sql.gif" />
     <Content Include="Js\angular-resource.js" />
     <Content Include="Js\angular.js" />
+    <Content Include="Js\baseCtrl.js" />
+    <Content Include="Js\blocksit.min.js" />
+    <Content Include="Js\custom.js" />
+    <Content Include="Js\jquery-1.7.1.min.js" />
+    <Content Include="Js\jquery.sticky.js" />
+    <Content Include="Js\jquery.validate.min.js" />
     <Content Include="Js\less.js" />
+    <Content Include="Js\stellar.js" />
     <Content Include="Js\tokenCtrl.js" />
+    <Content Include="Js\type.js" />
     <Content Include="Service\SSOService.asmx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
@@ -84,6 +98,16 @@
       <DependentUpon>CacheList.aspx</DependentUpon>
     </Compile>
     <Compile Include="CacheManager.cs" />
+    <Compile Include="database.ashx.cs">
+      <DependentUpon>database.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBases.aspx.cs">
+      <DependentUpon>DataBases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBases.aspx.designer.cs">
+      <DependentUpon>DataBases.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetToken.aspx.cs">
       <DependentUpon>GetToken.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,6 +136,7 @@
     <Content Include="Css\glyphicons-halflings-regular.ttf" />
     <Content Include="Css\glyphicons-halflings-regular.woff" />
     <Content Include="Css\glyphicons-halflings-regular.woff2" />
+    <Content Include="database.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,7 +144,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Elf\Elf.csproj">
+      <Project>{24086601-a75e-4217-9e35-defc88359edb}</Project>
+      <Name>Elf</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

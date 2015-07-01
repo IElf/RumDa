@@ -1,28 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.Script.Serialization;
+using Elf;
 
 namespace SSO
 {
     /// <summary>
-    /// cache 的摘要说明
+    /// database 的摘要说明
     /// </summary>
-    public class cache : IHttpHandler
+    public class database : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
             var jss = new JavaScriptSerializer();
-            context.Response.Write(jss.Serialize(GetVouchers()));
+            var dbs = Getdbs();
+            jss.MaxJsonLength = 20971520;
+            context.Response.Write(jss.Serialize(dbs));
+           
         }
 
-        private static IList<Voucher> GetVouchers()
+        private static IList<DataBase> Getdbs()
         {
-            var vouchers = CacheManager.GetCacheList();
-            return vouchers;
+            var dbs =Iris.GetDataBases();
+            return dbs;
         }
+
         public bool IsReusable
         {
             get

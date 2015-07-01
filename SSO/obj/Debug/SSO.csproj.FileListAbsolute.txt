@@ -5,3 +5,5 @@ C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\bin\Ne
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\obj\Debug\SSO.dll
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\obj\Debug\SSO.pdb
 C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\obj\Debug\SSO.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\bin\Elf.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\SSO\bin\Elf.pdb
