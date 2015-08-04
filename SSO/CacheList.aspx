@@ -65,4 +65,4 @@
 </html>
 <script src="Js/angular.js"></script>
 <script src="Js/angular-resource.js"></script>
-<script src="Js/tokenCtrl.js"></script>
+<script src="Js/controller/tokenCtrl.js"></script>
