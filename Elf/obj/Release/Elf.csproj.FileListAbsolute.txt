@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Elf\bin\Release\Elf.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Elf\bin\Release\Elf.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Elf\obj\Release\Elf.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Elf\obj\Release\Elf.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Elf\obj\Release\Elf.pdb
