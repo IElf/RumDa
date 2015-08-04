@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Elf
@@ -36,5 +37,40 @@ namespace Elf
         }
 
         public bool LookTables { get; set; }
+    }
+}
+
+
+public class DBList<T>  where T : class,new()
+{
+    public DBList()
+    {
+    }
+
+    public DBList(string msg ,IEnumerable<T> listt)
+    {
+        ListT = listt;
+        Messages = msg;
+    }
+    public string Id
+    {
+        get { return Guid.NewGuid().ToString(); }
+    }
+
+    public string Date
+    {
+        get { return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); }
+    }
+
+    public IEnumerable<T> ListT
+    {
+        get; 
+        set;
+    }
+
+    public string Messages
+    {
+        get;
+        set;
     }
 }

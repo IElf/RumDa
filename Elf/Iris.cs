@@ -53,40 +53,56 @@ namespace Elf
 
         }
 
-        public static IList<DataBase> GetDataBases(bool looktables, string name)
+        public static DBList<DataBase> GetDataBases(bool looktables, string name)
         {
-
-            IList<DataBase> dbs = new List<DataBase>();
-            SqlDataReader reader;
-            switch (name)
+            try
             {
-                case null:
-                case "":
-                    string sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases ORDER BY Name";
-                    reader = GetDataReader(sql);
-                    break;
-                default:
-                    var parms = new []
-                    {
-                        new SqlParameter("@name",name)
-                    };
-                    sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases where name=@name ORDER BY Name";
-                    reader = GetDataReader(sql, parms);
-                    break;
-            }
-            if (!reader.IsClosed)
-                while (reader.Read())
+                IList<DataBase> dbs = new List<DataBase>();
+                SqlDataReader reader;
+                switch (name)
                 {
-                    DataBase _db = new DataBase
-                    {
-                        BaseId = reader["BaseId"].ToString(),
-                        BaseName = reader["BaseName"].ToString(),
-                        FileName = reader["FileName"].ToString(),
-                        LookTables = looktables
-                    };
-                    dbs.Add(_db);
+                    case null:
+                    case "":
+                        string sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases ORDER BY Name";
+                        reader = GetDataReader(sql);
+                        break;
+                    default:
+                        var parms = new[]
+                        {
+                            new SqlParameter("@name", name)
+                        };
+                        sql =
+                            "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases where name=@name ORDER BY Name";
+                        reader = GetDataReader(sql, parms);
+                        break;
                 }
-            return dbs;
+                if (!reader.IsClosed)
+                    while (reader.Read())
+                    {
+                        DataBase _db = new DataBase
+                        {
+                            BaseId = reader["BaseId"].ToString(),
+                            BaseName = reader["BaseName"].ToString(),
+                            FileName = reader["FileName"].ToString(),
+                            LookTables = looktables
+                        };
+                        dbs.Add(_db);
+                    }
+                var res = new DBList<DataBase>
+                {
+                    ListT = dbs,
+                    Messages = "Success"
+                };
+                return res;
+            }
+            catch (Exception e)
+            {
+                return new DBList<DataBase>
+                {
+
+                    Messages = e.Message
+                };
+            }
         }
     }
 }
