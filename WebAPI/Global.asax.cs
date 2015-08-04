@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
-using System.Web.Routing;
 
 namespace WebAPI
 {
@@ -17,10 +11,8 @@ namespace WebAPI
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            Response.AddHeader("Access-Control-Allow-Origin", "*");
-            Request.Headers.Add("Access-Control-Allow-Origin", "*");
             WebApiConfig.Register(GlobalConfiguration.Configuration);
-            GlobalConfiguration.Configuration.Filters.Add(new JsonCallbackAttribute());
+            //GlobalConfiguration.Configuration.Filters.Add(new JsonCallbackAttribute());
         }
     }
 }

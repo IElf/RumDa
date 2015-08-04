@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Web;
 using System.Web.Http;
 using Elf;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace WebAPI.Controllers
 {
@@ -25,19 +26,26 @@ namespace WebAPI.Controllers
         {
         }
         [HttpGet]
-        public IEnumerable<DataBase> Get(string name, bool look)
+        public DBList<DataBase> Get(string name, bool look)
         {
-            return Iris.GetDataBases(look, name);
+
+            //var result=Iris.GetDataBases(look, name);
+            //var json=JsonConvert.SerializeObject(result);
+            //return json;
+            var dbs = Iris.GetDataBases(look, name);
+            return dbs;
         }
-        [HttpGet]
-        public IEnumerable<DataBase> Get(bool look)
-        {
-            return Iris.GetDataBases(look, "");
-        }
-        [HttpGet]
-        public IEnumerable<DataBase> Get()
-        {
-            return Iris.GetDataBases(false, "");
-        }
+        //[HttpGet]
+        //public IEnumerable<DataBase> Get(bool look)
+        //{
+        //    var dbs = Iris.GetDataBases(look, "");
+        //    return dbs;
+        //}
+        //[HttpGet]
+        //public IEnumerable<DataBase> Get()
+        //{
+        //    var dbs = Iris.GetDataBases(false, "");
+        //    return dbs;
+        //}
     }
 }

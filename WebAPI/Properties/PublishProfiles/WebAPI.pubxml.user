@@ -51,6 +51,12 @@
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>07/03/2015 17:29:24</publishTime>
     </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>08/04/2015 14:19:58</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>08/04/2015 14:19:57</publishTime>
+    </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>07/03/2015 17:29:20</publishTime>
     </File>
@@ -61,7 +67,7 @@
       <publishTime>07/03/2015 17:29:19</publishTime>
     </File>
     <File Include="bin/Elf.dll">
-      <publishTime>08/04/2015 10:51:52</publishTime>
+      <publishTime>08/04/2015 16:55:59</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>07/03/2015 17:29:06</publishTime>
@@ -175,7 +181,7 @@
       <publishTime>06/16/2015 15:59:42</publishTime>
     </File>
     <File Include="bin/WebAPI.dll">
-      <publishTime>08/04/2015 10:51:54</publishTime>
+      <publishTime>08/04/2015 17:00:50</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>07/03/2015 17:29:24</publishTime>
@@ -241,10 +247,10 @@
       <publishTime>07/06/2015 18:13:33</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>08/04/2015 10:51:57</publishTime>
+      <publishTime>08/04/2015 17:00:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/04/2015 10:51:56</publishTime>
+      <publishTime>08/04/2015 16:56:02</publishTime>
     </File>
   </ItemGroup>
 </Project>
