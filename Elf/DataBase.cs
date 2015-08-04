@@ -10,25 +10,31 @@ namespace Elf
         public IList<Table> Tables
         {
             get
-            {   IList<Table> _tables=new List<Table>();
-                if (!string.IsNullOrEmpty(BaseName))
+            {
+                IList<Table> _tables = new List<Table>();
+                if (LookTables)
                 {
-                    var sql = "select ID TableId,name TableName from [" + BaseName + "]..sysobjects";
-                    var reader = Iris.GetDataReader(sql);
-                    while (reader.Read())
+                    if (!string.IsNullOrEmpty(BaseName))
                     {
-                        var _table = new Table
+                        var sql = "select ID TableId,name TableName from [" + BaseName + "]..sysobjects";
+                        var reader = Iris.GetDataReader(sql);
+                        while (reader.Read())
                         {
-                            TableId = reader["TableId"].ToString(),
-                            TableName = reader["TableName"].ToString()
-                        };
-                        _tables.Add(_table);
+                            var _table = new Table
+                            {
+                                TableId = reader["TableId"].ToString(),
+                                TableName = reader["TableName"].ToString()
+                            };
+                            _tables.Add(_table);
+                        }
+                        reader.Dispose();
+                        reader.Close();
                     }
-                    reader.Dispose();
-                    reader.Close();
-                } 
+                }
                 return _tables;
             }
         }
+
+        public bool LookTables { get; set; }
     }
 }

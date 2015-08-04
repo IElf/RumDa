@@ -53,22 +53,39 @@ namespace Elf
 
         }
 
-        public static IList<DataBase> GetDataBases()
+        public static IList<DataBase> GetDataBases(bool looktables, string name)
         {
+
             IList<DataBase> dbs = new List<DataBase>();
-            string sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases ORDER BY Name";
-            var reader = GetDataReader(sql);
-            if(!reader.IsClosed)
-            while (reader.Read())
+            SqlDataReader reader;
+            switch (name)
             {
-                DataBase _db = new DataBase
-                {
-                    BaseId = reader["BaseId"].ToString(),
-                    BaseName = reader["BaseName"].ToString(),
-                    FileName = reader["FileName"].ToString()
-                };
-                dbs.Add(_db);
+                case null:
+                case "":
+                    string sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases ORDER BY Name";
+                    reader = GetDataReader(sql);
+                    break;
+                default:
+                    var parms = new []
+                    {
+                        new SqlParameter("@name",name)
+                    };
+                    sql = "SELECT dbid BaseId,name BaseName,FileName FROM Master..SysDatabases where name=@name ORDER BY Name";
+                    reader = GetDataReader(sql, parms);
+                    break;
             }
+            if (!reader.IsClosed)
+                while (reader.Read())
+                {
+                    DataBase _db = new DataBase
+                    {
+                        BaseId = reader["BaseId"].ToString(),
+                        BaseName = reader["BaseName"].ToString(),
+                        FileName = reader["FileName"].ToString(),
+                        LookTables = looktables
+                    };
+                    dbs.Add(_db);
+                }
             return dbs;
         }
     }
