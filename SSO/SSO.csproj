@@ -61,6 +61,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\index.html" />
+    <Content Include="app\scripts\app.js" />
+    <Content Include="app\scripts\controllers\controllers.js" />
+    <Content Include="app\scripts\controllers\BaseCtrl.js" />
+    <Content Include="app\scripts\controllers\notes.js" />
+    <Content Include="app\scripts\controllers\root.js" />
+    <Content Include="app\scripts\services\notes-service.js" />
+    <Content Include="app\scripts\services\services.js" />
+    <Content Include="app\views\about.html" />
+    <Content Include="app\views\dbs.html" />
+    <Content Include="app\views\notes.html" />
     <Content Include="CacheList.aspx" />
     <Content Include="Css\glyphicons-halflings-regular.svg" />
     <Content Include="Css\style.css" />
@@ -69,21 +80,25 @@
     <Content Include="DataBases.aspx" />
     <Content Include="GetToken.aspx" />
     <Content Include="grid.html" />
-    <Content Include="images\bg-pattern.png" />
-    <Content Include="images\sql.gif" />
+    <Content Include="app\images\bg-pattern.png" />
+    <Content Include="app\images\sql.gif" />
     <Content Include="Js\angular-resource.js" />
+    <Content Include="Js\angular-route.js" />
     <Content Include="Js\angular.js" />
-    <Content Include="Js\baseCtrl.js" />
+    <Content Include="Js\app.js" />
+    <Content Include="Js\controller\baseCtrl.js" />
     <Content Include="Js\blocksit.min.js" />
+    <Content Include="Js\controller\lithen.js" />
     <Content Include="Js\custom.js" />
     <Content Include="Js\jquery-1.7.1.min.js" />
     <Content Include="Js\jquery.sticky.js" />
     <Content Include="Js\jquery.validate.min.js" />
     <Content Include="Js\less.js" />
     <Content Include="Js\stellar.js" />
-    <Content Include="Js\tokenCtrl.js" />
+    <Content Include="Js\controller\tokenCtrl.js" />
     <Content Include="Js\type.js" />
     <Content Include="Js\widget-grid.js" />
+    <Content Include="index.html" />
     <Content Include="Service\SSOService.asmx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
@@ -151,6 +166,10 @@
       <Project>{24086601-a75e-4217-9e35-defc88359edb}</Project>
       <Name>Elf</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\scripts\directive\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
