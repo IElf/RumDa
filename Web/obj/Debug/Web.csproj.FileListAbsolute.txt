@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\bin\Web.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\bin\Web.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\bin\Web.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\obj\Debug\Web.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\obj\Debug\Web.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\SqlRumDa\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
