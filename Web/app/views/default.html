@@ -1,0 +1,26 @@
+﻿<div >
+    <div class="servicesBox" >
+        <div info ng-repeat="item in items" class="serBox" onclick="serFocus($index)">
+
+            <div class="serBoxOn"></div>
+            <div class="pic1 mypng">
+                <img ng-src="{{item.pic1}}">
+            </div>
+            <div class="pic2 mypng">
+                <img ng-src="{{item.pic2}}">
+            </div>
+            <div class="txt1">
+                <span class="tit" ng-bind="item.txt1"></span>
+                <p ng-bind="item.txt"></p>
+            </div>
+            <div class="txt2">
+                <a ng-href="item.link" target="_blank" class="a_jump">
+                    <span class="tit" ng-bind="item.txt2"></span>
+                    <p class="tit" ng-bind="item.txt"></p>
+                </a>
+            </div>
+        </div>
+        <div class="fgH20"></div>
+
+    </div>
+</div>
